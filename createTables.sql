@@ -84,4 +84,16 @@ create unique index TipoMueble_idMueble_uindex
     on TipoMueble (idMueble)
 go
 
+Insert into Categoria(idCategoria, nombre)VALUES (1,'Playa')
+go
+INSERT INTO Categoria(idCategoria, nombre) VALUES (2, 'Ejecutivo')
+go
+INSERT INTO Categoria (idCategoria, nombre)VALUES (3, 'Rústico')
+go
 
+INSERT INTO Material(idMaterial, nombre) VALUES (1, 'Madera')
+go
+INSERT INTO Material(idMaterial, nombre) VALUES (2, 'Aluminio')
+go
+INSERT INTO Material(idMaterial, nombre) VALUES (3, 'Plástico')
+go
