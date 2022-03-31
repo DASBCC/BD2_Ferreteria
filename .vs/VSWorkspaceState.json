@@ -1,6 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Interfaz",
+    "\\Interfaz\\Interfaz"
   ],
+  "SelectedNode": "\\Interfaz\\Interfaz\\Form1.Designer.cs",
   "PreviewInSolutionExplorer": false
 }
