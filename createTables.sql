@@ -91,9 +91,9 @@ go
 INSERT INTO Categoria (idCategoria, nombre)VALUES (3, 'Rústico')
 go
 
-INSERT INTO Material(idMaterial, nombre) VALUES (1, 'Madera')
+INSERT INTO Material( nombre) VALUES ( 'Madera')
 go
-INSERT INTO Material(idMaterial, nombre) VALUES (2, 'Aluminio')
+INSERT INTO Material(nombre) VALUES ( 'Aluminio')
 go
-INSERT INTO Material(idMaterial, nombre) VALUES (3, 'Plástico')
+INSERT INTO Material( nombre) VALUES ( 'Plástico')
 go
