@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace BD2_Muebleria
 {
-    public partial class Form1 : Form
+    public partial class InicioSistema : Form
     {
-        public Form1()
+        public InicioSistema()
         {
             InitializeComponent();
         }
