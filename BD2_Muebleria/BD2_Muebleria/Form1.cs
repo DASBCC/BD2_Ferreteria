@@ -22,8 +22,34 @@ namespace BD2_Muebleria
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void materialBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
+            this.Validate();
+            this.materialBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.muebleriaMultimediaDataSet);
+
+        }
+
+        private void materialBindingNavigatorSaveItem_Click_1(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.materialBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.muebleriaMultimediaDataSet);
+
+        }
+
+        private void materialBindingNavigatorSaveItem_Click_2(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.materialBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.muebleriaMultimediaDataSet);
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            // TODO: esta línea de código carga datos en la tabla 'muebleriaMultimediaDataSet.Material' Puede moverla o quitarla según sea necesario.
+            this.materialTableAdapter.Fill(this.muebleriaMultimediaDataSet.Material);
 
         }
     }
