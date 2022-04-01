@@ -9,3 +9,14 @@ C:\Users\Daniel\source\repos\BD2_Muebleria\BD2_Muebleria\obj\Debug\BD2_Muebleria
 C:\Users\Daniel\source\repos\BD2_Muebleria\BD2_Muebleria\obj\Debug\BD2_Muebleria.csproj.CoreCompileInputs.cache
 C:\Users\Daniel\source\repos\BD2_Muebleria\BD2_Muebleria\obj\Debug\BD2_Muebleria.exe
 C:\Users\Daniel\source\repos\BD2_Muebleria\BD2_Muebleria\obj\Debug\BD2_Muebleria.pdb
+C:\Users\anagu\OneDrive\Documentos\TEC\SemestreI2022\Bases de Datos II\Tareas\BD2_Muebleria\BD2_Muebleria\BD2_Muebleria\bin\Debug\BD2_Muebleria.exe.config
+C:\Users\anagu\OneDrive\Documentos\TEC\SemestreI2022\Bases de Datos II\Tareas\BD2_Muebleria\BD2_Muebleria\BD2_Muebleria\bin\Debug\BD2_Muebleria.exe
+C:\Users\anagu\OneDrive\Documentos\TEC\SemestreI2022\Bases de Datos II\Tareas\BD2_Muebleria\BD2_Muebleria\BD2_Muebleria\bin\Debug\BD2_Muebleria.pdb
+C:\Users\anagu\OneDrive\Documentos\TEC\SemestreI2022\Bases de Datos II\Tareas\BD2_Muebleria\BD2_Muebleria\BD2_Muebleria\obj\Debug\BD2_Muebleria.csproj.AssemblyReference.cache
+C:\Users\anagu\OneDrive\Documentos\TEC\SemestreI2022\Bases de Datos II\Tareas\BD2_Muebleria\BD2_Muebleria\BD2_Muebleria\obj\Debug\BD2_Muebleria.csproj.SuggestedBindingRedirects.cache
+C:\Users\anagu\OneDrive\Documentos\TEC\SemestreI2022\Bases de Datos II\Tareas\BD2_Muebleria\BD2_Muebleria\BD2_Muebleria\obj\Debug\BD2_Muebleria.Form1.resources
+C:\Users\anagu\OneDrive\Documentos\TEC\SemestreI2022\Bases de Datos II\Tareas\BD2_Muebleria\BD2_Muebleria\BD2_Muebleria\obj\Debug\BD2_Muebleria.Properties.Resources.resources
+C:\Users\anagu\OneDrive\Documentos\TEC\SemestreI2022\Bases de Datos II\Tareas\BD2_Muebleria\BD2_Muebleria\BD2_Muebleria\obj\Debug\BD2_Muebleria.csproj.GenerateResource.cache
+C:\Users\anagu\OneDrive\Documentos\TEC\SemestreI2022\Bases de Datos II\Tareas\BD2_Muebleria\BD2_Muebleria\BD2_Muebleria\obj\Debug\BD2_Muebleria.csproj.CoreCompileInputs.cache
+C:\Users\anagu\OneDrive\Documentos\TEC\SemestreI2022\Bases de Datos II\Tareas\BD2_Muebleria\BD2_Muebleria\BD2_Muebleria\obj\Debug\BD2_Muebleria.exe
+C:\Users\anagu\OneDrive\Documentos\TEC\SemestreI2022\Bases de Datos II\Tareas\BD2_Muebleria\BD2_Muebleria\BD2_Muebleria\obj\Debug\BD2_Muebleria.pdb
