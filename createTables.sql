@@ -46,7 +46,7 @@ create table Mueble
     color           varchar(10) not null,
     precio          money       not null,
     cuidados        varchar(50) not null,
-    imagen          image       not null,
+    imagen          image,     
     fk_idTipoMueble int
         constraint fk_idTipoMueble
             references TipoMueble,
@@ -84,11 +84,11 @@ create unique index TipoMueble_idMueble_uindex
     on TipoMueble (idMueble)
 go
 
-Insert into Categoria(idCategoria, nombre)VALUES (1,'Playa')
+Insert into Categoria( nombre)VALUES ('Playa')
 go
-INSERT INTO Categoria(idCategoria, nombre) VALUES (2, 'Ejecutivo')
+INSERT INTO Categoria( nombre) VALUES ('Ejecutivo')
 go
-INSERT INTO Categoria (idCategoria, nombre)VALUES (3, 'Rústico')
+INSERT INTO Categoria ( nombre)VALUES ( 'Rústico')
 go
 
 INSERT INTO Material( nombre) VALUES ( 'Madera')
@@ -97,3 +97,58 @@ INSERT INTO Material(nombre) VALUES ( 'Aluminio')
 go
 INSERT INTO Material( nombre) VALUES ( 'Plástico')
 go
+SELECT * FROM Material
+go
+------------------------------  CRUD productos --------------------------------------------------------
+--Agregar Funcion o procedimientoLos productos se deben de poder agregar al inventario (CRUD)
+------------------------------------------------------------------------------------------------------------
+CREATE PROCEDURE CInventario @idProducto int, @cantidad int
+as
+begin
+	begin transaction
+	if ((SELECT COUNT(idMueble) FROM Mueble Where @idProducto =idMueble) <1 AND @idProducto is not null and @cantidad is not null)
+		begin
+			if @cantidad >0
+				begin
+						IF((SELECT COUNT(fk_idMueble) FROM Inventario WHERE @idProducto = @idProducto)>0)
+						begin
+							INSERT INTO Inventario (fk_idMueble,stock) VALUES (@idProducto, @cantidad)
+						end
+						ELSE 
+							begin
+								UPDATE Inventario set stock = @cantidad WHERE @idProducto = fk_idMueble
+							end
+				end
+			else
+				begin
+				PRINT N'La cantidad no puede ser menor a 0';
+				end
+		end
+	else
+		begin
+			 PRINT N'No existe el id del producto para agregar al inventario';  
+		end
+	commit transaction 
+end 
+go
+
+CREATE PROCEDURE ConsultaInventario @idProducto int, @cantidad int 
+as
+begin  
+	SELECT fk_idMueble, stock FROM Inventario WHERE fk_idMueble = ISNULL(@idProducto, fk_idMueble) AND stock = ISNULL(@cantidad, stock)
+end
+go 
+CREATE PROCEDURE DInventario @idProducto int
+as
+begin 
+	IF @idProducto is not null
+	BEGIN 
+		delete Inventario from Inventario where @idProducto = fk_idMueble
+	END
+	ELSE
+	BEGIN
+		PRINT N'Debe contener un id válido de mueble'
+	END
+
+end
+go 
