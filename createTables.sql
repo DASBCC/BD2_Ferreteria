@@ -179,3 +179,5 @@ BEGIN
 				SELECT * FROM Mueble WHERE fk_idTipoMueble = @idTipoMueble
 		END
 END;
+
+select * from Mueble
