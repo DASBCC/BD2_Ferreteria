@@ -70,6 +70,9 @@
     <Compile Include="InicioSistema.Designer.cs">
       <DependentUpon>InicioSistema.cs</DependentUpon>
     </Compile>
+    <Compile Include="MuebleriaMultimediaDataSet.cs">
+      <DependentUpon>MuebleriaMultimediaDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="MuebleriaMultimediaDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

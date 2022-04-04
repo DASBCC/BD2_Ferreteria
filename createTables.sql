@@ -105,9 +105,12 @@ INSERT INTO TipoMueble( nombre) VALUES ( 'Silla')
 go
 
 INSERT INTO Mueble(color, precio, cuidados, fk_idTipoMueble, fk_idCategoria, fk_idMaterial) VALUES ('café', 200000, 'No mojar', 1, 3, 1)
-
+INSERT INTO Mueble(color, precio, cuidados, fk_idTipoMueble, fk_idCategoria, fk_idMaterial) VALUES ('negro', 120000, 'No rasgar y no mojar. Peso máximo de 120kg', 3, 2, 3)
 go
+SELECT * FROM TipoMueble
+SELECT * FROM Categoria
 SELECT * FROM Material
+
 go
 ------------------------------  CRUD productos --------------------------------------------------------
 --Agregar Funcion o procedimientoLos productos se deben de poder agregar al inventario (CRUD)
@@ -174,9 +177,16 @@ BEGIN
 	if (@tipoConsulta is not null)
 		BEGIN
 			IF (@tipoConsulta = 1)
-				SELECT * FROM Mueble
+				SELECT Mueble.idMueble, color, precio AS 'Precio en Colones', cuidados, imagen, TipoMueble.nombre AS 'Tipo de Mueble',
+				Categoria.nombre AS 'Categoria', Material.nombre AS 'Material' FROM Mueble INNER JOIN TipoMueble ON Mueble.fk_idTipoMueble = TipoMueble.idMueble
+				INNER JOIN Categoria ON Mueble.fk_idCategoria = Categoria.idCategoria
+				INNER JOIN Material ON Mueble.fk_idMaterial = Material.idMaterial
 			ELSE IF (@tipoConsulta = 2)
-				SELECT * FROM Mueble WHERE fk_idTipoMueble = @idTipoMueble
+				SELECT Mueble.idMueble, color, precio AS 'Precio en Colones', cuidados, imagen, TipoMueble.nombre AS 'Tipo de Mueble',
+				Categoria.nombre AS 'Categoria', Material.nombre AS 'Material' FROM Mueble INNER JOIN TipoMueble ON Mueble.fk_idTipoMueble = TipoMueble.idMueble
+				INNER JOIN Categoria ON Mueble.fk_idCategoria = Categoria.idCategoria
+				INNER JOIN Material ON Mueble.fk_idMaterial = Material.idMaterial
+				WHERE fk_idTipoMueble = @idTipoMueble
 		END
 END;
 
