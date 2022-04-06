@@ -64,20 +64,26 @@
     <Compile Include="Facturar.Designer.cs">
       <DependentUpon>Facturar.cs</DependentUpon>
     </Compile>
+<<<<<<< Updated upstream
     <Compile Include="Compra.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Compra.Designer.cs">
       <DependentUpon>Compra.cs</DependentUpon>
     </Compile>
+=======
+>>>>>>> Stashed changes
     <Compile Include="InicioSistema.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="InicioSistema.Designer.cs">
       <DependentUpon>InicioSistema.cs</DependentUpon>
+<<<<<<< Updated upstream
     </Compile>
     <Compile Include="MuebleriaMultimediaDataSet.cs">
       <DependentUpon>MuebleriaMultimediaDataSet.xsd</DependentUpon>
+=======
+>>>>>>> Stashed changes
     </Compile>
     <Compile Include="MuebleriaMultimediaDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -86,6 +92,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+<<<<<<< Updated upstream
     <EmbeddedResource Include="Consultar.resx">
       <DependentUpon>Consultar.cs</DependentUpon>
     </EmbeddedResource>
@@ -95,6 +102,8 @@
     <EmbeddedResource Include="Compra.resx">
       <DependentUpon>Compra.cs</DependentUpon>
     </EmbeddedResource>
+=======
+>>>>>>> Stashed changes
     <EmbeddedResource Include="InicioSistema.resx">
       <DependentUpon>InicioSistema.cs</DependentUpon>
     </EmbeddedResource>
