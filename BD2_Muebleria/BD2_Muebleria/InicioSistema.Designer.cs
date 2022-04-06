@@ -91,6 +91,8 @@
             // 
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager.CategoriaTableAdapter = null;
+            this.tableAdapterManager.CompraTableAdapter = null;
+            this.tableAdapterManager.FacturacionTableAdapter = null;
             this.tableAdapterManager.InventarioTableAdapter = null;
             this.tableAdapterManager.MaterialTableAdapter = this.materialTableAdapter;
             this.tableAdapterManager.MuebleTableAdapter = null;
@@ -116,6 +118,7 @@
             this.Controls.Add(this.button1);
             this.Name = "InicioSistema";
             this.Text = "InicioSistema";
+            this.Load += new System.EventHandler(this.InicioSistema_Load);
             ((System.ComponentModel.ISupportInitialize)(this.muebleriaMultimediaDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.materialBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.muebleBindingSource)).EndInit();

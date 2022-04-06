@@ -38,17 +38,19 @@
             // 
             // nameBox
             // 
-            this.nameBox.Location = new System.Drawing.Point(181, 136);
+            this.nameBox.Location = new System.Drawing.Point(136, 110);
+            this.nameBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.nameBox.Name = "nameBox";
-            this.nameBox.Size = new System.Drawing.Size(234, 22);
+            this.nameBox.Size = new System.Drawing.Size(176, 20);
             this.nameBox.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(117, 69);
+            this.label1.Location = new System.Drawing.Point(88, 56);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(379, 17);
+            this.label1.Size = new System.Drawing.Size(281, 13);
             this.label1.TabIndex = 1;
             this.label1.Text = "Por favor digite el nombre y apellido del cliente a facturarle";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -57,49 +59,55 @@
             // name
             // 
             this.name.AutoSize = true;
-            this.name.Location = new System.Drawing.Point(181, 113);
+            this.name.Location = new System.Drawing.Point(136, 92);
+            this.name.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.name.Name = "name";
-            this.name.Size = new System.Drawing.Size(58, 17);
+            this.name.Size = new System.Drawing.Size(44, 13);
             this.name.TabIndex = 2;
             this.name.Text = "Nombre";
             this.name.Click += new System.EventHandler(this.label2_Click);
             // 
             // lastNameBox
             // 
-            this.lastNameBox.Location = new System.Drawing.Point(181, 248);
+            this.lastNameBox.Location = new System.Drawing.Point(136, 202);
+            this.lastNameBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.lastNameBox.Name = "lastNameBox";
-            this.lastNameBox.Size = new System.Drawing.Size(234, 22);
+            this.lastNameBox.Size = new System.Drawing.Size(176, 20);
             this.lastNameBox.TabIndex = 3;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(181, 225);
+            this.label2.Location = new System.Drawing.Point(136, 183);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(58, 17);
+            this.label2.Size = new System.Drawing.Size(44, 13);
             this.label2.TabIndex = 4;
             this.label2.Text = "Apellido";
             // 
             // buttonFacturar
             // 
-            this.buttonFacturar.Location = new System.Drawing.Point(218, 347);
+            this.buttonFacturar.Location = new System.Drawing.Point(164, 282);
+            this.buttonFacturar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonFacturar.Name = "buttonFacturar";
-            this.buttonFacturar.Size = new System.Drawing.Size(154, 23);
+            this.buttonFacturar.Size = new System.Drawing.Size(116, 19);
             this.buttonFacturar.TabIndex = 5;
             this.buttonFacturar.Text = "Facturar";
             this.buttonFacturar.UseVisualStyleBackColor = true;
+            this.buttonFacturar.Click += new System.EventHandler(this.buttonFacturar_Click);
             // 
             // Facturar
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(622, 450);
+            this.ClientSize = new System.Drawing.Size(466, 366);
             this.Controls.Add(this.buttonFacturar);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.lastNameBox);
             this.Controls.Add(this.name);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.nameBox);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Facturar";
             this.Text = "Facturar";
             this.ResumeLayout(false);

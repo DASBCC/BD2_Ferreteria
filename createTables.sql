@@ -91,7 +91,17 @@ create table Compra
 )
 go
 
+CREATE PROCEDURE Prueba @pIdFactura int--, @pIdMueble int, @pCantidad int
+AS
+BEGIN
+	INSERT INTO Compra(fk_factura, fk_idMuebleCompra, cantidad, costo) VALUES (5, 1, 2,
+    (SELECT (precio*2) FROM Mueble WHERE idMueble = 1))
+    UPDATE Inventario SET stock = (SELECT (stock - 2) FROM Inventario WHERE fk_idMueble = 1);
+END
 
+EXEC Prueba @pIdFactura = 18
+
+select * from Compra
 -- CREATE COMPRA
 CREATE PROCEDURE FacturarLineaCompra(@pIdFactura int, @pIdMueble int, @pCantidad int)
 AS
@@ -124,18 +134,20 @@ AS
     END
 GO
 
+EXEC FacturarLineaCompra @pIdFactura = 15, @pidMueble = 1, @pCantidad = 2
 -- CREATE FACTURACION
 create procedure insertFacturacion(@pNombre varchar(25), @pApellido varchar(25))
 as
     BEGIN
         INSERT INTO Facturacion(NOMBRECLIENTE, APELLIDOCLIENTE) VALUES(ISNULL(@pNombre, 'Anonimo'),ISNULL(@pApellido, 'Anonimo') )
-    end
+		SELECT SCOPE_IDENTITY() AS 'idFactura'
+	end
 
-
+/*
 create unique index Inventario_fk_idMueble_uindex
         on Inventario (fk_idMueble)
 go
-
+*/
 
 create unique index Mueble_fk_idTipoMueble_uindex
     on Mueble (fk_idTipoMueble)
@@ -192,11 +204,11 @@ CREATE PROCEDURE CInventario @idProducto int, @cantidad int
 as
 begin
 	begin transaction
-	if ((SELECT COUNT(idMueble) FROM Mueble Where @idProducto =idMueble) <1 AND @idProducto is not null and @cantidad is not null)
+	if ((SELECT COUNT(idMueble) FROM Mueble Where @idProducto =idMueble) = 1 AND @idProducto is not null and @cantidad is not null)
 		begin
 			if @cantidad >0
 				begin
-						IF((SELECT COUNT(fk_idMueble) FROM Inventario WHERE @idProducto = @idProducto)>0)
+						IF((SELECT COUNT(fk_idMueble) FROM Inventario WHERE @idProducto = @idProducto)=0)
 						begin
 							INSERT INTO Inventario (fk_idMueble,stock) VALUES (@idProducto, @cantidad)
 						end
@@ -218,10 +230,18 @@ begin
 end
 go
 
-CREATE PROCEDURE ConsultaInventario @idProducto int, @cantidad int
+CREATE PROCEDURE ConsultaInventario @idProducto int = NULL, @cantidad int = NULL
 as
 begin
-	SELECT fk_idMueble, stock FROM Inventario WHERE fk_idMueble = ISNULL(@idProducto, fk_idMueble) AND stock = ISNULL(@cantidad, stock)
+	--SELECT fk_idMueble, stock FROM Inventario WHERE fk_idMueble = ISNULL(@idProducto, fk_idMueble) AND stock = ISNULL(@cantidad, stock)
+	--SELECT idMueble, nombre, precio, stock FROM Inventario INNER JOIN Mueble on Inventario.fk_idMueble = Mueble.idMueble
+	SELECT Mueble.idMueble, precio AS 'Precio en Colones', stock, TipoMueble.nombre AS 'Tipo de Mueble',
+			Categoria.nombre AS 'Categoria', Material.nombre AS 'Material' 
+			FROM Inventario INNER JOIN Mueble on Inventario.fk_idMueble = Mueble.idMueble
+			INNER JOIN TipoMueble ON Mueble.fk_idTipoMueble = TipoMueble.idMueble
+			INNER JOIN Categoria ON Mueble.fk_idCategoria = Categoria.idCategoria
+			INNER JOIN Material ON Mueble.fk_idMaterial = Material.idMaterial
+			WHERE fk_idMueble = ISNULL(@idProducto, fk_idMueble) AND stock = ISNULL(@cantidad, stock)
 end
 go
 CREATE PROCEDURE DInventario @idProducto int
@@ -238,7 +258,10 @@ begin
 
 end
 go
+EXEC ConsultaInventario
 
+EXEC CInventario @idProducto = 1, @cantidad = 30
+select * FROM Mueble
 ------------------------------  Función de Consulta --------------------------------------------------------
 /*Funcion Consulta con parametros opcionales: Un cliente puede ver los productos existentes, consultar por
 tipo de mueble, o verlos todos, se debe mostrar la imagen del producto, las características, precio, y

@@ -55,7 +55,6 @@
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AllowUserToResizeRows = false;
             this.dataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.dataGridView1.Location = new System.Drawing.Point(50, 243);
             this.dataGridView1.Name = "dataGridView1";
@@ -139,6 +138,8 @@
             // 
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager.CategoriaTableAdapter = null;
+            this.tableAdapterManager.CompraTableAdapter = null;
+            this.tableAdapterManager.FacturacionTableAdapter = null;
             this.tableAdapterManager.InventarioTableAdapter = null;
             this.tableAdapterManager.MaterialTableAdapter = null;
             this.tableAdapterManager.MuebleTableAdapter = this.muebleTableAdapter;
