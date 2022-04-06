@@ -54,6 +54,12 @@ namespace BD2_Muebleria
 
         private void button2_Click(object sender, EventArgs e)
         {
+            Facturar Factur = new Facturar();
+            Factur.Show();
+        }
+
+        private void InicioSistema_Load(object sender, EventArgs e)
+        {
 
         }
         /*

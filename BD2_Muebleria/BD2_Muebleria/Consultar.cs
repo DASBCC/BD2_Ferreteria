@@ -23,7 +23,7 @@ namespace BD2_Muebleria
             numericUpDown1.Enabled = false;
         }
 
-        SqlConnection con = new SqlConnection("Data Source=CHESPAVIL;Initial Catalog=MuebleriaMultimedia;Integrated Security=True");
+        SqlConnection con = new SqlConnection("Data Source=LAPTOP-JA4GCM36;Initial Catalog=MuebleriaMultimedia;Integrated Security=True");
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
