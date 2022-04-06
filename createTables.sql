@@ -102,6 +102,7 @@ END
 EXEC Prueba @pIdFactura = 18
 
 select * from Compra
+go
 -- CREATE COMPRA
 CREATE PROCEDURE FacturarLineaCompra(@pIdFactura int, @pIdMueble int, @pCantidad int)
 AS
@@ -136,6 +137,7 @@ GO
 
 EXEC FacturarLineaCompra @pIdFactura = 15, @pidMueble = 1, @pCantidad = 2
 -- CREATE FACTURACION
+go
 create procedure insertFacturacion(@pNombre varchar(25), @pApellido varchar(25))
 as
     BEGIN
@@ -214,7 +216,7 @@ begin
 						end
 						ELSE
 							begin
-								UPDATE Inventario set stock = @cantidad WHERE @idProducto = fk_idMueble
+								UPDATE Inventario set stock = (SELECT stock+@cantidad FROM Inventario WHERE @idProducto= fk_idMueble) WHERE @idProducto = fk_idMueble
 							end
 				end
 			else
@@ -267,6 +269,7 @@ select * FROM Mueble
 tipo de mueble, o verlos todos, se debe mostrar la imagen del producto, las características, precio, y
 demás información*/
 ------------------------------------------------------------------------------------------------------------
+go
 CREATE PROCEDURE ConsultarMuebles @tipoConsulta int= NULL, @idTipoMueble int = NULL
 AS
 BEGIN
