@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\BD2_Muebleria",
+    "\\BD2_Muebleria\\BD2_Muebleria"
   ],
-  "SelectedNode": "\\BD2_Muebleria.sln",
+  "SelectedNode": "\\BD2_Muebleria\\BD2_Muebleria\\Properties",
   "PreviewInSolutionExplorer": false
 }

@@ -270,10 +270,11 @@ go
 
 INSERT INTO Facturacion(nombreCliente,apellidoCliente) VALUES ('Luis', 'Fonseca');
 
-INSERT INTO Inventario(fk_idMueble, stock) VALUES (3,5)
+INSERT INTO Inventario(fk_idMueble, stock) VALUES (1,5)
+INSERT INTO Inventario(fk_idMueble, stock) VALUES (2,5)
 
 --Insert Into Compra(fk_factura, fk_idMuebleCompra, cantidad, costo) Values(1,1,2,20000);
-EXECUTE FacturarLineaCompra @pIdFactura = 1, @pIdMueble = 3, @pCantidad = 2;
+EXECUTE FacturarLineaCompra @pIdFactura = 1, @pIdMueble = 1, @pCantidad = 2;
 
 EXECUTE insertFacturacion @pNombre = NULL, @pApellido = NULL
 
