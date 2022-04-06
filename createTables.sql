@@ -1,3 +1,16 @@
+/*
+Bases de Datos #2 Grupo #2
+Tarea: BD Multimedia
+Fecha de Entrega: 5-4-2022
+Integrantes:
+-Daniel Araya Sambucci - 2020207809
+-Ana Guevara Roselló - 2018102514
+-Esteban Leiva Montenegro - 2020426227
+*/
+
+------------------------------  TABLAS --------------------------------------------------------
+--CREACIÓN DE TODAS LAS TABLAS DE LA BASE DE DATOS
+------------------------------------------------------------------------------------------------------------
 Create database MuebleriaMultimedia;
 
 use MuebleriaMultimedia
@@ -91,64 +104,6 @@ create table Compra
 )
 go
 
-CREATE PROCEDURE Prueba @pIdFactura int--, @pIdMueble int, @pCantidad int
-AS
-BEGIN
-	INSERT INTO Compra(fk_factura, fk_idMuebleCompra, cantidad, costo) VALUES (5, 1, 2,
-    (SELECT (precio*2) FROM Mueble WHERE idMueble = 1))
-    UPDATE Inventario SET stock = (SELECT (stock - 2) FROM Inventario WHERE fk_idMueble = 1);
-END
-
-EXEC Prueba @pIdFactura = 18
-
-select * from Compra
--- CREATE COMPRA
-CREATE PROCEDURE FacturarLineaCompra(@pIdFactura int, @pIdMueble int, @pCantidad int)
-AS
-    BEGIN
-        declare @error varchar(20)
-        IF(@pIdFactura IS NOT NULL AND @pIdMueble IS NOT NULL AND @pCantidad IS NOT NULL)
-            BEGIN
-            IF    ((SELECT COUNT(idFactura) FROM Facturacion WHERE idFactura = @pIdFactura) = 0
-                 OR (SELECT COUNT(idMueble) FROM Mueble WHERE idMueble = @pIdMueble )= 0 OR (@pCantidad < 1) OR (@@ERROR <>0))
-                 BEGIN
-                    set @error = 'ocurrió un problema'
-                    print @error
-                 END
-            ELSE
-                BEGIN
-                IF ((SELECT (stock - @pCantidad) FROM Inventario WHERE fk_idMueble = @pIdMueble) >= 0)
-                    BEGIN
-                        INSERT INTO Compra(fk_factura, fk_idMuebleCompra, cantidad, costo) VALUES (@pIdFactura, @pIdMueble, @pCantidad,
-                               (SELECT (precio)*@pCantidad FROM Mueble WHERE idMueble = @pIdMueble))
-                        UPDATE Inventario SET stock = (SELECT (stock - @pCantidad) FROM Inventario WHERE fk_idMueble = @pIdMueble);
-                        --RETURN (SELECT precio*@pCantidad FROM Mueble WHERE idMueble = @pIdMueble);
-                    END
-                ELSE
-                    BEGIN
-                        set @error = 'No hay suficiente inventario'
-                        Print @error
-                    END
-                END
-            END
-    END
-GO
-
-EXEC FacturarLineaCompra @pIdFactura = 15, @pidMueble = 1, @pCantidad = 2
--- CREATE FACTURACION
-create procedure insertFacturacion(@pNombre varchar(25), @pApellido varchar(25))
-as
-    BEGIN
-        INSERT INTO Facturacion(NOMBRECLIENTE, APELLIDOCLIENTE) VALUES(ISNULL(@pNombre, 'Anonimo'),ISNULL(@pApellido, 'Anonimo') )
-		SELECT SCOPE_IDENTITY() AS 'idFactura'
-	end
-
-/*
-create unique index Inventario_fk_idMueble_uindex
-        on Inventario (fk_idMueble)
-go
-*/
-
 create unique index Mueble_fk_idTipoMueble_uindex
     on Mueble (fk_idTipoMueble)
 go
@@ -164,6 +119,11 @@ go
 create unique index TipoMueble_idMueble_uindex
     on TipoMueble (idMueble)
 go
+
+
+------------------------------  INSERTS --------------------------------------------------------
+--INSERTS INICIALES PARA LA EJECUCIÓN DE LA BASE DE DATOS
+------------------------------------------------------------------------------------------------------------
 
 Insert into TipoMueble(nombre)VALUES ('Mesa')
 go
@@ -191,30 +151,29 @@ go
 
 INSERT INTO Mueble(color, precio, cuidados, fk_idTipoMueble, fk_idCategoria, fk_idMaterial) VALUES ('café', 200000, 'No mojar', 1, 3, 1)
 INSERT INTO Mueble(color, precio, cuidados, fk_idTipoMueble, fk_idCategoria, fk_idMaterial) VALUES ('negro', 120000, 'No rasgar y no mojar. Peso máximo de 120kg', 3, 2, 3)
-go
-SELECT * FROM TipoMueble
-SELECT * FROM Categoria
-SELECT * FROM Material
 
-go
+
 ------------------------------  CRUD productos --------------------------------------------------------
 --Agregar Funcion o procedimientoLos productos se deben de poder agregar al inventario (CRUD)
 ------------------------------------------------------------------------------------------------------------
 CREATE PROCEDURE CInventario @idProducto int, @cantidad int
 as
+declare
+	@cantActual int
 begin
 	begin transaction
 	if ((SELECT COUNT(idMueble) FROM Mueble Where @idProducto =idMueble) = 1 AND @idProducto is not null and @cantidad is not null)
 		begin
 			if @cantidad >0
 				begin
-						IF((SELECT COUNT(fk_idMueble) FROM Inventario WHERE @idProducto = @idProducto)=0)
+						IF((SELECT COUNT(fk_idMueble) FROM Inventario WHERE fk_idMueble = @idProducto)=0)
 						begin
 							INSERT INTO Inventario (fk_idMueble,stock) VALUES (@idProducto, @cantidad)
 						end
 						ELSE
 							begin
-								UPDATE Inventario set stock = @cantidad WHERE @idProducto = fk_idMueble
+								SET @cantActual = (SELECT stock FROM Inventario WHERE @idProducto = fk_idMueble)
+								UPDATE Inventario set stock = (@cantActual + @cantidad) WHERE @idProducto = fk_idMueble
 							end
 				end
 			else
@@ -233,8 +192,6 @@ go
 CREATE PROCEDURE ConsultaInventario @idProducto int = NULL, @cantidad int = NULL
 as
 begin
-	--SELECT fk_idMueble, stock FROM Inventario WHERE fk_idMueble = ISNULL(@idProducto, fk_idMueble) AND stock = ISNULL(@cantidad, stock)
-	--SELECT idMueble, nombre, precio, stock FROM Inventario INNER JOIN Mueble on Inventario.fk_idMueble = Mueble.idMueble
 	SELECT Mueble.idMueble, precio AS 'Precio en Colones', stock, TipoMueble.nombre AS 'Tipo de Mueble',
 			Categoria.nombre AS 'Categoria', Material.nombre AS 'Material' 
 			FROM Inventario INNER JOIN Mueble on Inventario.fk_idMueble = Mueble.idMueble
@@ -249,7 +206,7 @@ as
 begin
 	IF @idProducto is not null
 	BEGIN
-		delete Inventario from Inventario where @idProducto = fk_idMueble
+		update Inventario set stock = 0 WHERE @idProducto = fk_idMueble
 	END
 	ELSE
 	BEGIN
@@ -258,10 +215,7 @@ begin
 
 end
 go
-EXEC ConsultaInventario
 
-EXEC CInventario @idProducto = 1, @cantidad = 30
-select * FROM Mueble
 ------------------------------  Función de Consulta --------------------------------------------------------
 /*Funcion Consulta con parametros opcionales: Un cliente puede ver los productos existentes, consultar por
 tipo de mueble, o verlos todos, se debe mostrar la imagen del producto, las características, precio, y
@@ -286,19 +240,58 @@ BEGIN
 		END
 END;
 
-select * from Mueble
+------------------------------  Función de Facturación --------------------------------------------------------
+/*Funcion de facturacion: El cliente puede seleccionar los productos, y el sistema debe de realizar la facturación*/
+------------------------------------------------------------------------------------------------------------
 
-INSERT INTO Mueble(color, precio, cuidados, fk_idTipoMueble, fk_idCategoria, fk_idMaterial, imagen) VALUES ('café', 200000, 'No mojar', 1, 3, 1, 'image.jpg')
-go
+-- LÍNEAS DE COMPRA
+CREATE PROCEDURE FacturarLineaCompra(@pIdFactura int, @pIdMueble int, @pCantidad int)
+AS
+    BEGIN
+        declare @error varchar(20)
+        IF(@pIdFactura IS NOT NULL AND @pIdMueble IS NOT NULL AND @pCantidad IS NOT NULL)
+            BEGIN
+            IF    ((SELECT COUNT(idFactura) FROM Facturacion WHERE idFactura = @pIdFactura) = 0
+                 OR (SELECT COUNT(idMueble) FROM Mueble WHERE idMueble = @pIdMueble )= 0 OR (@pCantidad < 1) OR (@@ERROR <>0))
+                 BEGIN
+                    set @error = 'ocurrió un problema'
+                    print @error
+                 END
+            ELSE
+                BEGIN
+                IF ((SELECT (stock - @pCantidad) FROM Inventario WHERE fk_idMueble = @pIdMueble) >= 0)
+                    BEGIN
+                        INSERT INTO Compra(fk_factura, fk_idMuebleCompra, cantidad, costo) VALUES (@pIdFactura, @pIdMueble, @pCantidad,
+                               (SELECT (precio)*@pCantidad FROM Mueble WHERE idMueble = @pIdMueble))
+                        UPDATE Inventario SET stock = (SELECT (stock - @pCantidad) FROM Inventario WHERE fk_idMueble = @pIdMueble)WHERE fk_idMueble = @pIdMueble;
+                        --RETURN (SELECT precio*@pCantidad FROM Mueble WHERE idMueble = @pIdMueble);
+                    END
+                ELSE
+                    BEGIN
+                        set @error = 'No hay suficiente inventario'
+                        Print @error
+                    END
+                END
+            END
+    END
+GO
 
-INSERT INTO Facturacion(nombreCliente,apellidoCliente) VALUES ('Luis', 'Fonseca');
+-- ORDEN DE FACTURA
+create procedure insertFacturacion(@pNombre varchar(25), @pApellido varchar(25))
+as
+    BEGIN
+        INSERT INTO Facturacion(NOMBRECLIENTE, APELLIDOCLIENTE) VALUES(ISNULL(@pNombre, 'Anonimo'),ISNULL(@pApellido, 'Anonimo') )
+		SELECT SCOPE_IDENTITY() AS 'idFactura'
+	end
 
-INSERT INTO Inventario(fk_idMueble, stock) VALUES (1,5)
-INSERT INTO Inventario(fk_idMueble, stock) VALUES (2,5)
+------------------------------ SELECTS GENERALES --------------------------------------------------------
+/*SELECTS de todas las tablas de la base de datos*/
+------------------------------------------------------------------------------------------------------------
 
---Insert Into Compra(fk_factura, fk_idMuebleCompra, cantidad, costo) Values(1,1,2,20000);
-EXECUTE FacturarLineaCompra @pIdFactura = 1, @pIdMueble = 1, @pCantidad = 2;
-
-EXECUTE insertFacturacion @pNombre = NULL, @pApellido = NULL
-
+SELECT * FROM Categoria
 SELECT * FROM Compra
+SELECT * FROM Facturacion
+SELECT * FROM Inventario
+SELECT * FROM Material
+SELECT * FROM Mueble
+SELECT * FROM TipoMueble
