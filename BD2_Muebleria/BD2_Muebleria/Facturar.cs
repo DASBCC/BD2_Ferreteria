@@ -18,7 +18,7 @@ namespace BD2_Muebleria
             InitializeComponent();
         }
 
-        SqlConnection con = new SqlConnection("Data Source=LAPTOP-JA4GCM36;Initial Catalog=MuebleriaMultimedia;Integrated Security=True");
+        SqlConnection con = new SqlConnection("Data Source=CHESPAVIL;Initial Catalog=MuebleriaMultimedia;Integrated Security=True");
 
         private void label1_Click(object sender, EventArgs e)
         {

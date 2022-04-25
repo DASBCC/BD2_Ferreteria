@@ -24,7 +24,7 @@ namespace BD2_Muebleria
 
         }
 
-        SqlConnection con = new SqlConnection("Data Source=LAPTOP-JA4GCM36;Initial Catalog=MuebleriaMultimedia;Integrated Security=True");
+        SqlConnection con = new SqlConnection("Data Source=CHESPAVIL;Initial Catalog=MuebleriaMultimedia;Integrated Security=True");
         
         private void compraBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {

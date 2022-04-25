@@ -238,7 +238,8 @@ BEGIN
 				INNER JOIN Material ON Mueble.fk_idMaterial = Material.idMaterial
 				WHERE fk_idTipoMueble = @idTipoMueble
 		END
-END;
+END
+go
 
 ------------------------------  Función de Facturación --------------------------------------------------------
 /*Funcion de facturacion: El cliente puede seleccionar los productos, y el sistema debe de realizar la facturación*/

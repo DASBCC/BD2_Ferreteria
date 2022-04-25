@@ -24,3 +24,6 @@ D:\TEC\Base de Datos ll\Semana 8\Muebleria\BD2_Muebleria\BD2_Muebleria\BD2_Muebl
 D:\TEC\Base de Datos ll\Semana 8\Muebleria\BD2_Muebleria\BD2_Muebleria\BD2_Muebleria\obj\Debug\BD2_Muebleria.exe
 D:\TEC\Base de Datos ll\Semana 8\Muebleria\BD2_Muebleria\BD2_Muebleria\BD2_Muebleria\obj\Debug\BD2_Muebleria.pdb
 D:\TEC\Base de Datos ll\Semana 8\Muebleria\BD2_Muebleria\BD2_Muebleria\BD2_Muebleria\obj\Debug\BD2_Muebleria.AgergarInventario.resources
+C:\Users\anagu\OneDrive\Documentos\TEC\SemestreI2022\Bases de Datos II\Tareas\BD2_Muebleria\BD2_Muebleria\BD2_Muebleria\obj\Debug\BD2_Muebleria.AgergarInventario.resources
+C:\Users\anagu\OneDrive\Documentos\TEC\SemestreI2022\Bases de Datos II\Tareas\BD2_Muebleria\BD2_Muebleria\BD2_Muebleria\obj\Debug\BD2_Muebleria.Facturar.resources
+C:\Users\anagu\OneDrive\Documentos\TEC\SemestreI2022\Bases de Datos II\Tareas\BD2_Muebleria\BD2_Muebleria\BD2_Muebleria\obj\Debug\BD2_Muebleria.Compra.resources
