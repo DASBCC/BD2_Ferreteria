@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{BB15A02C-CA2A-46FB-87B3-832E548B3902}</ProjectGuid>
+    <ProjectGuid>{0D1154C4-1F95-4E4B-8AF4-D3C905819050}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>BD2_Muebleria</RootNamespace>
     <AssemblyName>BD2_Muebleria</AssemblyName>
@@ -46,19 +46,73 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Bases2MuebleriaDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Bases2MuebleriaDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="AgregarInventario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="AgregarInventario.Designer.cs">
+      <DependentUpon>AgregarInventario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Consultar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultar.Designer.cs">
+      <DependentUpon>Consultar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Facturar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Facturar.Designer.cs">
+      <DependentUpon>Facturar.cs</DependentUpon>
+    </Compile>
+<<<<<<< Updated upstream
+    <Compile Include="Compra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Compra.Designer.cs">
+      <DependentUpon>Compra.cs</DependentUpon>
+    </Compile>
+=======
+>>>>>>> Stashed changes
+    <Compile Include="InicioSistema.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InicioSistema.Designer.cs">
+      <DependentUpon>InicioSistema.cs</DependentUpon>
+<<<<<<< Updated upstream
+    </Compile>
+    <Compile Include="MuebleriaMultimediaDataSet.cs">
+      <DependentUpon>MuebleriaMultimediaDataSet.xsd</DependentUpon>
+=======
+>>>>>>> Stashed changes
+    </Compile>
+    <Compile Include="MuebleriaMultimediaDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MuebleriaMultimediaDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+<<<<<<< HEAD
+<<<<<<< Updated upstream
+=======
+    <EmbeddedResource Include="AgregarInventario.resx">
+      <DependentUpon>AgregarInventario.cs</DependentUpon>
+    </EmbeddedResource>
+>>>>>>> main
+    <EmbeddedResource Include="Consultar.resx">
+      <DependentUpon>Consultar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Facturar.resx">
+      <DependentUpon>Facturar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Compra.resx">
+      <DependentUpon>Compra.cs</DependentUpon>
+    </EmbeddedResource>
+=======
+>>>>>>> Stashed changes
+    <EmbeddedResource Include="InicioSistema.resx">
+      <DependentUpon>InicioSistema.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -68,16 +122,16 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="Bases2MuebleriaDataSet.xsc">
-      <DependentUpon>Bases2MuebleriaDataSet.xsd</DependentUpon>
+    <None Include="MuebleriaMultimediaDataSet.xsc">
+      <DependentUpon>MuebleriaMultimediaDataSet.xsd</DependentUpon>
     </None>
-    <None Include="Bases2MuebleriaDataSet.xsd">
+    <None Include="MuebleriaMultimediaDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>Bases2MuebleriaDataSet.Designer.cs</LastGenOutput>
+      <LastGenOutput>MuebleriaMultimediaDataSet.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="Bases2MuebleriaDataSet.xss">
-      <DependentUpon>Bases2MuebleriaDataSet.xsd</DependentUpon>
+    <None Include="MuebleriaMultimediaDataSet.xss">
+      <DependentUpon>MuebleriaMultimediaDataSet.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

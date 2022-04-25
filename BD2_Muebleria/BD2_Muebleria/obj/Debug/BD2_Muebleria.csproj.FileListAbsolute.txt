@@ -1,12 +1,39 @@
-C:\Users\anagu\OneDrive\Documentos\TEC\SemestreI2022\Bases de Datos II\Tareas\MuebleriaMultimedia\BD2_Muebleria\BD2_Muebleria\BD2_Muebleria\bin\Debug\BD2_Muebleria.exe.config
-C:\Users\anagu\OneDrive\Documentos\TEC\SemestreI2022\Bases de Datos II\Tareas\MuebleriaMultimedia\BD2_Muebleria\BD2_Muebleria\BD2_Muebleria\bin\Debug\BD2_Muebleria.exe
-C:\Users\anagu\OneDrive\Documentos\TEC\SemestreI2022\Bases de Datos II\Tareas\MuebleriaMultimedia\BD2_Muebleria\BD2_Muebleria\BD2_Muebleria\bin\Debug\BD2_Muebleria.pdb
-C:\Users\anagu\OneDrive\Documentos\TEC\SemestreI2022\Bases de Datos II\Tareas\MuebleriaMultimedia\BD2_Muebleria\BD2_Muebleria\BD2_Muebleria\obj\Debug\BD2_Muebleria.csproj.AssemblyReference.cache
-C:\Users\anagu\OneDrive\Documentos\TEC\SemestreI2022\Bases de Datos II\Tareas\MuebleriaMultimedia\BD2_Muebleria\BD2_Muebleria\BD2_Muebleria\obj\Debug\BD2_Muebleria.csproj.SuggestedBindingRedirects.cache
-C:\Users\anagu\OneDrive\Documentos\TEC\SemestreI2022\Bases de Datos II\Tareas\MuebleriaMultimedia\BD2_Muebleria\BD2_Muebleria\BD2_Muebleria\obj\Debug\BD2_Muebleria.Form1.resources
-C:\Users\anagu\OneDrive\Documentos\TEC\SemestreI2022\Bases de Datos II\Tareas\MuebleriaMultimedia\BD2_Muebleria\BD2_Muebleria\BD2_Muebleria\obj\Debug\BD2_Muebleria.Form2.resources
-C:\Users\anagu\OneDrive\Documentos\TEC\SemestreI2022\Bases de Datos II\Tareas\MuebleriaMultimedia\BD2_Muebleria\BD2_Muebleria\BD2_Muebleria\obj\Debug\BD2_Muebleria.Properties.Resources.resources
-C:\Users\anagu\OneDrive\Documentos\TEC\SemestreI2022\Bases de Datos II\Tareas\MuebleriaMultimedia\BD2_Muebleria\BD2_Muebleria\BD2_Muebleria\obj\Debug\BD2_Muebleria.csproj.GenerateResource.cache
-C:\Users\anagu\OneDrive\Documentos\TEC\SemestreI2022\Bases de Datos II\Tareas\MuebleriaMultimedia\BD2_Muebleria\BD2_Muebleria\BD2_Muebleria\obj\Debug\BD2_Muebleria.csproj.CoreCompileInputs.cache
-C:\Users\anagu\OneDrive\Documentos\TEC\SemestreI2022\Bases de Datos II\Tareas\MuebleriaMultimedia\BD2_Muebleria\BD2_Muebleria\BD2_Muebleria\obj\Debug\BD2_Muebleria.exe
-C:\Users\anagu\OneDrive\Documentos\TEC\SemestreI2022\Bases de Datos II\Tareas\MuebleriaMultimedia\BD2_Muebleria\BD2_Muebleria\BD2_Muebleria\obj\Debug\BD2_Muebleria.pdb
+C:\Users\anagu\OneDrive\Documentos\TEC\SemestreI2022\Bases de Datos II\Tareas\BD2_Muebleria\BD2_Muebleria\BD2_Muebleria\bin\Debug\BD2_Muebleria.exe.config
+C:\Users\anagu\OneDrive\Documentos\TEC\SemestreI2022\Bases de Datos II\Tareas\BD2_Muebleria\BD2_Muebleria\BD2_Muebleria\bin\Debug\BD2_Muebleria.exe
+C:\Users\anagu\OneDrive\Documentos\TEC\SemestreI2022\Bases de Datos II\Tareas\BD2_Muebleria\BD2_Muebleria\BD2_Muebleria\bin\Debug\BD2_Muebleria.pdb
+C:\Users\anagu\OneDrive\Documentos\TEC\SemestreI2022\Bases de Datos II\Tareas\BD2_Muebleria\BD2_Muebleria\BD2_Muebleria\obj\Debug\BD2_Muebleria.csproj.AssemblyReference.cache
+C:\Users\anagu\OneDrive\Documentos\TEC\SemestreI2022\Bases de Datos II\Tareas\BD2_Muebleria\BD2_Muebleria\BD2_Muebleria\obj\Debug\BD2_Muebleria.Consultar.resources
+C:\Users\anagu\OneDrive\Documentos\TEC\SemestreI2022\Bases de Datos II\Tareas\BD2_Muebleria\BD2_Muebleria\BD2_Muebleria\obj\Debug\BD2_Muebleria.InicioSistema.resources
+C:\Users\anagu\OneDrive\Documentos\TEC\SemestreI2022\Bases de Datos II\Tareas\BD2_Muebleria\BD2_Muebleria\BD2_Muebleria\obj\Debug\BD2_Muebleria.Properties.Resources.resources
+C:\Users\anagu\OneDrive\Documentos\TEC\SemestreI2022\Bases de Datos II\Tareas\BD2_Muebleria\BD2_Muebleria\BD2_Muebleria\obj\Debug\BD2_Muebleria.csproj.GenerateResource.cache
+C:\Users\anagu\OneDrive\Documentos\TEC\SemestreI2022\Bases de Datos II\Tareas\BD2_Muebleria\BD2_Muebleria\BD2_Muebleria\obj\Debug\BD2_Muebleria.csproj.CoreCompileInputs.cache
+C:\Users\anagu\OneDrive\Documentos\TEC\SemestreI2022\Bases de Datos II\Tareas\BD2_Muebleria\BD2_Muebleria\BD2_Muebleria\obj\Debug\BD2_Muebleria.exe
+C:\Users\anagu\OneDrive\Documentos\TEC\SemestreI2022\Bases de Datos II\Tareas\BD2_Muebleria\BD2_Muebleria\BD2_Muebleria\obj\Debug\BD2_Muebleria.pdb
+<<<<<<< HEAD
+C:\Users\Esteb\OneDrive\Documentos\Repositorios Github\BD2_Muebleria\BD2_Muebleria\BD2_Muebleria\bin\Debug\BD2_Muebleria.exe.config
+C:\Users\Esteb\OneDrive\Documentos\Repositorios Github\BD2_Muebleria\BD2_Muebleria\BD2_Muebleria\bin\Debug\BD2_Muebleria.exe
+C:\Users\Esteb\OneDrive\Documentos\Repositorios Github\BD2_Muebleria\BD2_Muebleria\BD2_Muebleria\bin\Debug\BD2_Muebleria.pdb
+C:\Users\Esteb\OneDrive\Documentos\Repositorios Github\BD2_Muebleria\BD2_Muebleria\BD2_Muebleria\obj\Debug\BD2_Muebleria.csproj.AssemblyReference.cache
+C:\Users\Esteb\OneDrive\Documentos\Repositorios Github\BD2_Muebleria\BD2_Muebleria\BD2_Muebleria\obj\Debug\BD2_Muebleria.InicioSistema.resources
+C:\Users\Esteb\OneDrive\Documentos\Repositorios Github\BD2_Muebleria\BD2_Muebleria\BD2_Muebleria\obj\Debug\BD2_Muebleria.Properties.Resources.resources
+C:\Users\Esteb\OneDrive\Documentos\Repositorios Github\BD2_Muebleria\BD2_Muebleria\BD2_Muebleria\obj\Debug\BD2_Muebleria.csproj.GenerateResource.cache
+C:\Users\Esteb\OneDrive\Documentos\Repositorios Github\BD2_Muebleria\BD2_Muebleria\BD2_Muebleria\obj\Debug\BD2_Muebleria.csproj.CoreCompileInputs.cache
+C:\Users\Esteb\OneDrive\Documentos\Repositorios Github\BD2_Muebleria\BD2_Muebleria\BD2_Muebleria\obj\Debug\BD2_Muebleria.exe
+C:\Users\Esteb\OneDrive\Documentos\Repositorios Github\BD2_Muebleria\BD2_Muebleria\BD2_Muebleria\obj\Debug\BD2_Muebleria.pdb
+=======
+D:\TEC\Base de Datos ll\Semana 8\Muebleria\BD2_Muebleria\BD2_Muebleria\BD2_Muebleria\bin\Debug\BD2_Muebleria.exe.config
+D:\TEC\Base de Datos ll\Semana 8\Muebleria\BD2_Muebleria\BD2_Muebleria\BD2_Muebleria\bin\Debug\BD2_Muebleria.exe
+D:\TEC\Base de Datos ll\Semana 8\Muebleria\BD2_Muebleria\BD2_Muebleria\BD2_Muebleria\bin\Debug\BD2_Muebleria.pdb
+D:\TEC\Base de Datos ll\Semana 8\Muebleria\BD2_Muebleria\BD2_Muebleria\BD2_Muebleria\obj\Debug\BD2_Muebleria.csproj.AssemblyReference.cache
+D:\TEC\Base de Datos ll\Semana 8\Muebleria\BD2_Muebleria\BD2_Muebleria\BD2_Muebleria\obj\Debug\BD2_Muebleria.csproj.SuggestedBindingRedirects.cache
+D:\TEC\Base de Datos ll\Semana 8\Muebleria\BD2_Muebleria\BD2_Muebleria\BD2_Muebleria\obj\Debug\BD2_Muebleria.Consultar.resources
+D:\TEC\Base de Datos ll\Semana 8\Muebleria\BD2_Muebleria\BD2_Muebleria\BD2_Muebleria\obj\Debug\BD2_Muebleria.Facturar.resources
+D:\TEC\Base de Datos ll\Semana 8\Muebleria\BD2_Muebleria\BD2_Muebleria\BD2_Muebleria\obj\Debug\BD2_Muebleria.Compra.resources
+D:\TEC\Base de Datos ll\Semana 8\Muebleria\BD2_Muebleria\BD2_Muebleria\BD2_Muebleria\obj\Debug\BD2_Muebleria.InicioSistema.resources
+D:\TEC\Base de Datos ll\Semana 8\Muebleria\BD2_Muebleria\BD2_Muebleria\BD2_Muebleria\obj\Debug\BD2_Muebleria.Properties.Resources.resources
+D:\TEC\Base de Datos ll\Semana 8\Muebleria\BD2_Muebleria\BD2_Muebleria\BD2_Muebleria\obj\Debug\BD2_Muebleria.csproj.GenerateResource.cache
+D:\TEC\Base de Datos ll\Semana 8\Muebleria\BD2_Muebleria\BD2_Muebleria\BD2_Muebleria\obj\Debug\BD2_Muebleria.csproj.CoreCompileInputs.cache
+D:\TEC\Base de Datos ll\Semana 8\Muebleria\BD2_Muebleria\BD2_Muebleria\BD2_Muebleria\obj\Debug\BD2_Muebleria.exe
+D:\TEC\Base de Datos ll\Semana 8\Muebleria\BD2_Muebleria\BD2_Muebleria\BD2_Muebleria\obj\Debug\BD2_Muebleria.pdb
+D:\TEC\Base de Datos ll\Semana 8\Muebleria\BD2_Muebleria\BD2_Muebleria\BD2_Muebleria\obj\Debug\BD2_Muebleria.AgergarInventario.resources
+>>>>>>> main
